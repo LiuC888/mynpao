@@ -17,14 +17,14 @@
         <console name="console" target="system_out">
             <!-- appender级别的日志过滤 -->
             <!-- <thresholdFilter level="info" onMatch="accept" onMismatch="deny"/> -->
-            <patternLayout pattern="${FORMAT}"/>
+            <patternLayout pattern="%highlight${FORMAT}"/>
         </console>
         <!-- 常用于开发环境,把日志记录到文件中,默认追加 -->
         <file name="db_log" fileName="${LOG_HOME}/my-blog-db.log" append="true">
-            <patternLayout pattern="${FORMAT}"/>
+            <patternLayout pattern="%highlight${FORMAT}"/>
         </file>
         <file name="service_log" fileName="${LOG_HOME}/my-blog-info.log" append="true">
-            <patternLayout pattern="${FORMAT}"/>
+            <patternLayout pattern="%highlight${FORMAT}"/>
         </file>
     </appenders>
 
